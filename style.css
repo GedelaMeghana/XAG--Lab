@@ -1,0 +1,195 @@
+/* Existing CSS */
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: antiquewhite;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 62px 64px 0 64px;
+    background: #fff;
+}
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #e9004b;
+    letter-spacing: 2px;
+}
+nav {
+    display: flex;
+    gap: 40px;
+}
+nav a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+nav a.active {
+    color: #e9004b;
+}
+.divider {
+    border-top: 3px solid #eee;
+    margin-top: 32px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 64px 0 64px;
+    position: relative;
+}
+h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 3rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+.description {
+    font-size: 1rem;
+    color: #222;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.team-grid {
+    position: relative; 
+    overflow: hidden; 
+    margin-top: 32px;
+    padding: 0 50px;
+}
+
+.team-carousel-wrapper { 
+    display: flex; 
+    transition: transform 0.5s ease-in-out; 
+    
+}
+
+.team-member {
+    background: #f7f7f7;
+    border-radius: 12px;
+    padding: 24px 16px 16px 16px;
+    text-align: center;
+    flex-shrink: 0; 
+    min-width: calc(100% / 4 - 32px / 4 * 3);
+    width: 25%; 
+    box-sizing: border-box; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    margin-right: 32px; 
+}
+.team-member:last-child {
+    margin-right: 0; 
+}
+
+
+.team-member img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 2px solid #e9004b;
+    border-radius: 8px;
+    margin-bottom: 18px;
+}
+.team-member .name {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 4px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.team-member .role {
+    color: #555;
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.carousel-prev-button,
+.carousel-next-button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 12px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-prev-button:hover,
+.carousel-next-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-prev-button {
+    left: 0; 
+}
+
+.carousel-next-button {
+    right: 0; 
+}
+
+
+.side-bar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 100px;
+    display: flex;
+    flex-direction: column1,column2; 
+    z-index: 10;
+    padding-top: 109px;
+}
+.side-bar .personal-details {
+    background: #e9004b;
+    color: #fff;
+    writing-mode: vertical-rl;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(180deg);
+}
+.side-bar .contact-us {
+    background: #ffa726;
+    color: #fff;
+    writing-mode: vertical-rl;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(180deg);
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+    .container {
+        padding: 24px;
+    }
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+    }
+    .team-grid {
+        padding: 0 20px; 
+    }
+    .team-member {
+        width: 50%; 
+        min-width: unset; 
+        margin-right: 16px; 
+    }
+}
