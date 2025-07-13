@@ -1,0 +1,113 @@
+body {
+            margin: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            background:rgb(247, 16, 85);
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 32px 104px 0 64px;
+            background: #fff;
+        }
+        body:not(header) {
+            background-color: orange;
+            color: black;
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: rgb(247, 16, 85);
+            letter-spacing: 2px;
+            font-style: bold;
+        }
+        nav {
+            display: flex;
+            gap: 40px;
+        }
+        nav a.active {
+            color: rgb(247, 16, 85);
+        }
+        .divider {
+            margin-top: 42px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 64px 0 64px;
+            position: relative;
+        }
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 3rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+            color: white;
+            text-align: center;
+        }
+        p {
+            font-size: 1.5rem;
+            color: #222;
+            line-height: 1.6;
+            padding-left: 70px;
+        }
+        .side-bar {
+        position: fixed;
+        top:30px;
+        left: 0;
+        height: 100vh;
+        width: 100px;
+        display: flex;
+        flex-direction: column1, cloumn2;
+        justify-content: space-between;
+        z-index: 10; 
+        padding-top: 78px;
+    }
+    .Our-Team{     
+            background:antiquewhite;
+            color: #fff;
+            writing-mode: vertical-rl;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(180deg);
+    }
+    .personal-details {
+            
+            background: rgb(247, 16, 85);
+            color: #fff;
+            writing-mode: vertical-rl;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            flex:1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(180deg);
+            text-align:start;
+        }
+        @media (max-width: 900px) {
+            .container {
+                padding: 24px;
+            }
+            .team-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .team-member {
+                width: 90vw;
+                max-width: 320px;
+            }
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding:24px;
+            }
+        }
