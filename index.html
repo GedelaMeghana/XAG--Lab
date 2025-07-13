@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XAG Lab Assessment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">LOGO</div>
+        <nav>
+            <a href="#" class="active">OUR TEAM</a>
+            <a href="personal details.html">PERSONAL DETAILS</a>
+            <a href="contact us.html">CONTACT US</a>
+        </nav>
+    </header>
+    <div class="divider"></div>
+    <div class="container">
+        <h1>Our Team</h1>
+        <div class="description">
+            We believe that great ideas come to life through collaboration and innovation. Our team is a diverse group of passionate professionals, each bringing unique skills and experiences to the table. From creative designers and strategic thinkers to technical experts and problem-solvers, we are united by a shared vision of delivering excellence in everything we do.<br><br>
+            Our mission is to empower businesses and individuals by creating innovative, sustainable, and user-friendly designs. With a culture that values integrity, growth, and teamwork, we are committed to creating meaningful solutions that make a difference. Whether it’s crafting cutting-edge designs, developing user-centered interfaces, or building sustainable solutions, our team thrives on turning challenges into opportunities.
+        </div>
+
+        <div class="team-grid">
+            <div class="team-carousel-wrapper">
+                <div class="team-member">
+                    <img src="Image1.jpg" alt="Meredith Allen">
+                    <div class="name">Meredith Allen</div>
+                    <div class="role">CEO</div>
+                </div>
+                <div class="team-member">
+                    <img src="Image2.jpg" alt="Thomas Woodward">
+                    <div class="name">Thomas Woodward</div>
+                    <div class="role">COO</div>
+                </div>
+                <div class="team-member">
+                    <img src="Image3.jpg" alt="Wade Barton">
+                    <div class="name">Wade Barton</div>
+                    <div class="role">Business Analyst</div>
+                </div>
+                <div class="team-member">
+                    <img src="Image4.jpg" alt="Yahir Marquez">
+                    <div class="name">Yahir Marquez</div>
+                    <div class="role">Marketing Executive</div>
+                </div>
+                <div class="team-member">
+                    <img src="Image5.jpg" alt="Alyssa Mcclain">
+                    <div class="name">Verra Rodgers</div>
+                    <div class="role">Lead Designer</div>
+                </div>
+            </div>
+            <button class="carousel-prev-button">&#10094;</button>
+            <button class="carousel-next-button">&#10095;</button>
+        </div>
+        </div>
+    <div class="side-bar">
+        <div class="personal-details"><a href="personal details.html">Personal Details</a></div>
+        <div class="contact-us"><a href="contact us.html">Contact Us</a></div>
+    </div>
+
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            const teamCarouselWrapper = document.querySelector('.team-carousel-wrapper');
+            const teamMembers = document.querySelectorAll('.team-member');
+            const prevButton = document.querySelector('.carousel-prev-button');
+            const nextButton = document.querySelector('.carousel-next-button');
+
+            const membersPerView = 4; 
+            const totalMembers = teamMembers.length; 
+            let currentSlideIndex = 0; 
+
+            
+            function updateCarouselPosition() {
+                
+                const translateXValue = -currentSlideIndex * (100 / membersPerView);
+                teamCarouselWrapper.style.transform = `translateX(${translateXValue}%)`;
+            }
+
+            
+            nextButton.addEventListener('click', () => {
+                
+                if (currentSlideIndex >= totalMembers - membersPerView) {
+                    currentSlideIndex = 0;
+                } else {
+                    currentSlideIndex++;
+                }
+                updateCarouselPosition();
+            });
+
+            
+            prevButton.addEventListener('click', () => {
+                if (currentSlideIndex <= 0) {
+                    currentSlideIndex = totalMembers - membersPerView;
+                } else {
+                    currentSlideIndex--;
+                }
+                updateCarouselPosition();
+            });
+
+            
+            updateCarouselPosition();
+
+            
+             setInterval(() => {
+                 if (currentSlideIndex >= totalMembers - membersPerView) {
+                     currentSlideIndex = 0;
+                 } else {
+                    currentSlideIndex++;
+               }
+                 updateCarouselPosition();
+             }, 3000); 
+        });
+        // 
+    </script>
+</body>
+</html>
